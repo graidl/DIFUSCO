@@ -1,2 +1,6 @@
 scripts
 .idea
+condaenv.okypqer5.requirements.txt
+**/__pycache__/
+*.so
+difusco/utils/cython_merge/cython_merge.c
