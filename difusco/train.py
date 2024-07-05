@@ -14,6 +14,7 @@ from pytorch_lightning.utilities import rank_zero_info
 
 from pl_tsp_model import TSPModel
 from pl_mis_model import MISModel
+from pl_own_model import OwnModel
 
 
 def arg_parser():
@@ -77,6 +78,9 @@ def main(args):
     saving_mode = 'min'
   elif args.task == 'mis':
     model_class = MISModel
+    saving_mode = 'max'
+  elif args.task == 'own':
+    model_class = OwnModel
     saving_mode = 'max'
   else:
     raise NotImplementedError

@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal", 
+            "args": ["--task", "own", 
+                "--wandb_logger_name", "own_dg_cat",
+                "--storage_path", "storage",
+                "--diffusion_type", "categorical", 
+                "--do_train",
+                "--learning_rate", "0.0002",
+                "--weight_decay", "0.0001",
+                "--lr_scheduler", "cosine-decay", 
+                "--training_split", "train_own2/ER*", 
+                "--batch_size", "16",
+                "--validation_examples", "8",
+                "--inference_schedule", "cosine",
+                "--test_split", "train_own2/ER*",
+                "--validation_split", "train_own2/ER*",
+                "--inference_diffusion_steps", "50",
+                "--use_activation_checkpoint",
+            ],
+        }
+    ]
+}
