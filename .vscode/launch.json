@@ -17,6 +17,7 @@
                 "--lr_scheduler", "cosine-decay", 
                 "--training_split", "train_own2/ER*", 
                 "--batch_size", "16",
+                "--num_epochs", "50",
                 "--validation_examples", "8",
                 "--inference_schedule", "cosine",
                 "--test_split", "train_own2/ER*",
